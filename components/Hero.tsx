@@ -48,7 +48,7 @@ const Hero = () => {
 
 					<div className="App">
 						<p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-							Hi! I'm Muhana Naufal, 
+							Hi! I'm Muhana Naufal,
 							<span className='text-purple inline'>
 							<Typewriter words={['a Fullstack Developer']} loop={0} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
 							</span>
