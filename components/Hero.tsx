@@ -50,7 +50,7 @@ const Hero = () => {
 						<p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
 							Hi! Im Muhana Naufal,
 							<span className='text-purple inline'>
-							<Typewriter words={['a Fullstack Developer']} loop={0} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
+							<Typewriter words={[' a Fullstack Developer']} loop={0} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
 							</span>
 							based in Indonesia
 						</p>
