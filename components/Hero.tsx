@@ -1,9 +1,10 @@
-import { FaLocationArrow } from 'react-icons/fa6';
+import { FaLocationArrow, FaDownload } from 'react-icons/fa6';
 
-import MagicButton from './MagicButton';
+import MagicButtonSmall from './MagicButtonSmall';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { Typewriter } from 'nextjs-simple-typewriter';
+
 
 const Hero = () => {
 	return (
@@ -24,7 +25,7 @@ const Hero = () => {
 			 *  0.2 to 0.03
 			 */}
 			<div
-				className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+				className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] light:bg-grid-black-[0.03]/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
 			>
 				{/* Radial gradient for the container to give a faded look */}
@@ -36,28 +37,31 @@ const Hero = () => {
 			</div>
 
 			<div className="flex justify-center relative my-20 z-10">
+
 				<div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-					<p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-100">Modern & Minimalist Portfolio with Next.js</p>
+				<div className="block">
+				</div>
+					<p className="uppercase tracking-widest text-xs text-center dark:text-blue-100 max-w-100">Modern & Minimalist Portfolio with Next.js</p>
 
 					{/**
 					 *  Link: https://ui.aceternity.com/components/text-generate-effect
 					 *
 					 *  change md:text-6xl, add more responsive code
 					 */}
-					<TextGenerateEffect words="Crafting Seamless User Experiences Through Fullstack Web Development" className="text-center text-[40px] md:text-5xl lg:text-6xl" />
+					<TextGenerateEffect words="Crafting Seamless User Experiences Through Fullstack Development" className="text-center text-[40px] md:text-5xl lg:text-6xl" />
 
-					<div className="App">
-						<p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+					<div className="App lg:h-8 h-10">
+						<p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl lg:h-8 md:h-10">
 							Hi! Im Muhana Naufal,
-							<span className='text-purple inline'>
-							<Typewriter words={[' a Fullstack Developer']} loop={0} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
+							<span className="text-purple inline">
+								<Typewriter words={[' a Fullstack Developer']} loop={0} cursor cursorStyle="_" typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
 							</span>
 							based in Indonesia
 						</p>
 					</div>
 
-					<a href="#about">
-						<MagicButton title="Show my work" icon={<FaLocationArrow />} position="right" />
+					<a href="/curriculum-vitae.pdf" className="lg:mt-10">
+						<MagicButtonSmall title="Download CV" icon={<FaDownload />} position="right" />
 					</a>
 				</div>
 			</div>

@@ -1,6 +1,26 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	webpack: (config, { isServer }) => {
+		// File loader for audio files
+		config.module.rules.push({
+			test: /\.(ogg|mp3|wav|mpe?g)$/i,
+			use: [
+				{
+					loader: 'file-loader',
+					options: {
+						publicPath: '/_next',
+						name: 'static/media/[name].[hash].[ext]',
+						outputPath: 'static/media',
+						emitFile: true,
+					},
+				},
+			],
+		});
+
+		return config;
+	},
+};
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
@@ -8,8 +28,8 @@ export default withSentryConfig(nextConfig, {
 
 // Suppresses source map uploading logs during build
 silent: true,
-org: "javascript-mastery",
-project: "javascript-nextjs",
+org: "muhananaufal",
+project: "muhananaufal-portfolio",
 }, {
 // For all available options, see:
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
