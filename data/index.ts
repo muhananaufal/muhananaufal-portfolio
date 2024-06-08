@@ -1,5 +1,6 @@
 export const navItems = [
 	{ name: 'About', link: '#about' },
+	{ name: 'Skills', link: '#skills' },
 	{ name: 'Projects', link: '#myProjects' },
 	{ name: 'Testimonials', link: '#testimonials' },
 	{ name: 'Contact', link: '#contact' },
@@ -10,7 +11,7 @@ export const gridItems = [
 		id: 1,
 		title: 'I prioritize client collaboration, fostering open communication ',
 		description: '',
-		className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
+		className: 'lg:col-span-3 lg:row-span-3 md:col-span-6 md:row-span-4 lg:min-h-[40vh] md:min-h-[25vh]',
 		imgClassName: 'w-full h-full',
 		titleClassName: 'justify-end',
 		img: '/b2.jpg',
@@ -20,7 +21,7 @@ export const gridItems = [
 		id: 2,
 		title: "I'm very flexible with time zone communications",
 		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
+		className: 'lg:col-span-2 lg:row-span-4 md:col-span-3 md:row-span-3',
 		imgClassName: '',
 		titleClassName: 'justify-start',
 		img: '',
@@ -28,40 +29,19 @@ export const gridItems = [
 	},
 	{
 		id: 3,
-		title: 'My tech stack',
-		description: 'I constantly try to improve',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
-		imgClassName: '',
-		titleClassName: 'justify-center',
-		img: '',
-		spareImg: '',
-	},
-	{
-		id: 4,
-		title: 'Tech enthusiast with a passion for development.',
-		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
-		imgClassName: '',
-		titleClassName: 'justify-start',
-		img: '/grid.svg',
-		spareImg: '/b4.svg',
-	},
-
-	{
-		id: 5,
-		title: 'Currently building a MERN Stack Application',
-		description: 'The Inside Scoop',
-		className: 'md:col-span-3 md:row-span-2',
+		title: 'Tech enthusiast with a passion for development',
+		description: 'Building MERN Application',
+		className: 'lg:col-span-3 lg:row-span-3 md:col-span-3 md:row-span-1',
 		imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
 		titleClassName: 'justify-center md:justify-start lg:justify-center',
-		img: '/b5.svg',
+		img: '/b4.svg',
 		spareImg: '/grid.svg',
 	},
 	{
-		id: 6,
+		id: 4,
 		title: 'Do you want to start a project together?',
 		description: '',
-		className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
+		className: 'lg:col-span-2 lg:row-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
 		titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
 		img: '',
@@ -69,9 +49,114 @@ export const gridItems = [
 	},
 ];
 
+export const skillsUpper = [
+	{
+		name: 'Tailwind',
+		Image: '/tailwind.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'React',
+		Image: '/react.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'Redux',
+		Image: '/redux.png',
+		width: 80,
+		height: 80,
+	},
+
+	{
+		name: 'TypeScript',
+		Image: '/ts.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'NextJs',
+		Image: '/next.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'NodeJs',
+		Image: '/node-js.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'MongoDB',
+		Image: '/mongodb.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'Prisma',
+		Image: '/prisma.png',
+		width: 80,
+		height: 80,
+	},
+];
+
+export const skillsLower = [
+	{
+		name: 'PostgreSQL',
+		Image: '/postges.png',
+		width: 80,
+		height: 80, 
+	},
+	{
+		name: 'MysQL',
+		Image: '/mysql.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'Golang',
+		Image: '/golang.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'NestJs',
+		Image: '/nestjs.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'ExpressJs',
+		Image: '/expressjs.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'Firebase',
+		Image: '/firebase.png',
+		width: 80,
+		height: 80,
+	},
+
+	{
+		name: 'Docker',
+		Image: '/docker.png',
+		width: 80,
+		height: 80,
+	},
+	{
+		name: 'Laravel',
+		Image: '/laravel.png',
+		width: 80,
+		height: 80,
+	},
+];
+
 export const myProjects = [
 	{
 		id: 1,
+		direct: 'https://github.com/muhananaufal',
 		title: 'Project 1',
 		des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		img: '/p0.svg',
@@ -80,11 +165,12 @@ export const myProjects = [
 	},
 	{
 		id: 2,
+		direct: 'https://github.com/muhananaufal',
 		title: 'Project 2',
 		des: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		img: '/p0.svg',
-		iconLists: ['/typescript.svg', '/nextjs.svg', '/framermotion.svg', '/threejs.svg', '/tailwind.svg'],
-		link: '/github.com/muhananaufal',
+		iconLists: ['/typescript.svg', '/framermotion.svg', '/threejs.svg', '/tailwind.svg'],
+		link: '/github.com/muhananaufal-portfolio',
 	},
 ];
 
@@ -200,5 +286,21 @@ export const socialMedia = [
 		id: 3,
 		img: '/link.svg',
 		link: 'https://www.linkedin.com/in/muhana-naufal-al-atsari/',
+	},
+];
+
+
+export const songsdata = [
+	{
+		id: 'Music 1',
+		src: '/audio.mp3',
+	},
+	{
+		id: 'Music 2',
+		src: '/audio.mp3',
+	},
+	{
+		id: 'Music 3',
+		src: '/audio.mp3',
 	},
 ];
