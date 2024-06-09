@@ -142,15 +142,10 @@ span {
 .rap-volume {
 	@apply hidden;
 }
-
-/* .rap-container {
-	@apply bg-transparent;
-} */
-
 .rap-pp-button svg path {
 	@apply fill-black
 }
 
-.dark\:text-black:is(.dark *) .rap-pp-button svg path {
+.dark .rap-pp-button svg path {
 	@apply fill-white
 }
