@@ -1,6 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
-import MagicButton from "./MagicButton";
+import MagicButton from "./MagicButtonSubmit";
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import '../app/contact.css';
@@ -25,32 +25,31 @@ const variants = {
 
 
 const Contact = () => {
-
-	const ref = useRef();
-	const formRef = useRef();
+	const ref = useRef<HTMLDivElement>(null); // ref for motion.div
+	const formRef = useRef<HTMLFormElement>(null); // ref for form
 	const [error, setError] = useState(false);
 	const [success, setSuccess] = useState(false);
 
-
 	const isInView = useInView(ref, { margin: '-100px' });
 
-const sendEmail = (e) => {
-	e.preventDefault();
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-	emailjs.sendForm('service_wzms2hq', 'template_q3sidjq', formRef.current, 'Tvwi9TEW7bKBPXNRk').then(
-		(result) => {
-			setSuccess(true);
-			toast.success('Email sent successfully!');
-			formRef.current.reset();
-		},
-		(error) => {
-			setError(true);
-			toast.error('Failed to send email.');
-		}
-	);
-};
 
-  return (
+		emailjs.sendForm('service_wzms2hq', 'template_q3sidjq', formRef.current!, 'Tvwi9TEW7bKBPXNRk').then(
+			(result) => {
+				setSuccess(true);
+				toast.success('Email sent successfully!');
+				formRef.current!.reset();
+			},
+			(error) => {
+				setError(true);
+				toast.error('Failed to send email.');
+			}
+		);
+	};
+
+	return (
 		<footer className="w-full pb-10 md:mb-5" id="contact">
 			<div className=" flex flex-col items-center pb-10">
 				<h1 className="heading lg:max-w-[45vw]">
@@ -114,7 +113,7 @@ const sendEmail = (e) => {
 							</div>
 							<div className="grid justify-center pt-4">
 								<Toaster richColors closeButton expand={true} />
-								<MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" type="submit" />
+								<MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" />
 							</div>
 							{error}
 							{success}
